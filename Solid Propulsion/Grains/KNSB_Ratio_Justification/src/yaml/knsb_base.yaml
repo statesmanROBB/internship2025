@@ -6,24 +6,6 @@ date: Thu, 26 Jun 2025 10:54:00 +0300
 
 units: {length: mm, time: s, temperature: K, pressure: Pa, quantity: kmol}
 
-phases:
-  - name: KNSB-combusting
-    description: The composite sugar propellant combustion products.
-    thermo: ideal-gas
-    elements: [K, N, C, H, O]
-    species: [
-      H2, H2O, CH2O, CO2, N2, N2O, NO2, CO, CH4, HCN, KCN, K2CO3, KNO2, KH, K,
-      K2H2O2, KOH, K2O, O2, OH, HO2
-    ]
-    kinetics: none
-  - name: KNSB-solid
-    description: The composite sugar propellant before combustion.
-    thermo: compound-lattice
-    elements: [K, N, C, H, O]
-    species: [KNO3, C6H14O6]
-    composition: {KNO3: 0.650, C6H14O6: 0.350}
-    state: {T: 298.15, P: 101325.0}
-
 species:
   - name: H2
     composition: {H: 2}
@@ -336,3 +318,22 @@ species:
         T0: 298.15
         h0: -1128.8
         s0: 207.4
+
+phases:
+  - name: KNSB-combusting
+    description: The composite sugar propellant combustion products.
+    thermo: ideal-gas
+    elements: [K, N, C, H, O]
+    species: [
+      H2, H2O, CH2O, CO2, N2, N2O, NO2, CO, CH4, HCN, KCN, K2CO3, KNO2, KH, K,
+      K2H2O2, KOH, K2O, O2, OH, HO2, KNO3, C6H14O6
+    ]
+    kinetics: none
+  - name: KNSB-solid
+    description: The composite sugar propellant before combustion.
+    thermo: compound-lattice
+    elements: [K, N, C, H, O]
+    species: [KNO3, C6H14O6]
+    composition: {KNO3: 0.650, C6H14O6: 0.350}
+    state: {T: 298.15, P: 101325.0}
+
