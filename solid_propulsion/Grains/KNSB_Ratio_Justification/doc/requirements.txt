@@ -1,7 +1,7 @@
 ipykernel
 numpy
 pandas
-cantera
+pypropep
 matplotlib
 Fraction
 sympy
