@@ -1,0 +1,11 @@
+ipykernel
+numpy
+pandas
+pypropep
+matplotlib
+scipy
+sympy
+Fraction
+ase
+mdanalysis
+ovito
